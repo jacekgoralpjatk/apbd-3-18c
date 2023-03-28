@@ -1,0 +1,4 @@
+imie,nazwisko,numerIndeksu,dataUrodzenia,studia,tryb,email,imieOjca,imieMatki
+Jan,Kowalski,s1234,3/20/1991,Informatyka,Dzienne,kowalski@wp.pl,Jan,AnnaJacke
+Jacke,Gorsky,s24881,17/04/2000,Informatyka,Dzienne,jacke@jacke.jacke,Tomasz,Barbara
+Kamil,Ślimak,s23881,17/05/2001,Informatyka,Dzienne,jacke@notjacke.jacke,Kamil,Kamil
