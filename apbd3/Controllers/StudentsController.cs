@@ -26,9 +26,7 @@ public class StudentsController : ControllerBase
     {
         var student = new Student()
         {
-            numerIndeksu = "s1000",
-            imie = "Jacke",
-            nazwisko = "Gorsky"
+            
         };
         return Ok(student);
     }
