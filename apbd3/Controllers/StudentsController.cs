@@ -9,25 +9,16 @@ namespace apbd3.Controllers;
 [Route("students")]
 public class StudentsController : ControllerBase
 {
-    [HttpGet("names")]
-    public string GetNames()
-    {
-        return "students names";
-    }
-
-    [HttpGet("{idStudent}/grades")]
-    public string GetStudentGrades(int idStudent)
-    {
-        return idStudent + " grades: 1,2,3";
-    }
-
+    
     [HttpGet("{idStudent}")]
-    public IActionResult GetStudent(int idStudent)
+    public IActionResult GetStudent(string idStudent)
     {
-        var student = new Student()
+        Student student;
+        using (var reader = new StreamReader("Resources/students.csv"))
+        using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
         {
-            
-        };
+            student = csv.GetRecords<Student>().ToList().Find( x => x.numerIndeksu.Equals(idStudent));
+        }
         return Ok(student);
     }
 
